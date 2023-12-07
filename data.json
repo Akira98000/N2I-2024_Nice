@@ -1,20 +1,12 @@
 {
     "qcm_1": [
         {
-            "question_1": "Quel gaz à effet de serre a l'impact le plus important sur le réchauffement climatique ?",
+            "question": "Quel gaz à effet de serre a l'impact le plus important sur le réchauffement climatique ?",
             "options": [
-                {
-                    "texte_option": "Dioxyde de carbone (CO2)"
-                },
-                {
-                    "texte_option": "Méthane (CH4)"
-                },
-                {
-                    "texte_option": "Ozone (O3)"
-                },
-                {
-                    "texte_option": "Protoxyde d'azote (N2O)"
-                }
+                    "Dioxyde de carbone (CO2)",
+                    "Méthane (CH4)",
+                    "Ozone (O3)",
+                    "Protoxyde d'azote (N2O)"
             ],
             "explication": "Le CO2, bien que moins puissant que certains autres gaz à effet de serre, est le plus abondant et a donc le plus grand impact sur le réchauffement climatique.",
             "image_base": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -22,20 +14,12 @@
             "image_mauvaise_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400"
         },
         {
-            "question_2": "Quelle est la conséquence la plus directe de la fonte des glaces polaires ?",
+            "question": "Quelle est la conséquence la plus directe de la fonte des glaces polaires ?",
             "options": [
-                {
-                    "texte_option": "Élévation du niveau de la mer"
-                },
-                {
-                    "texte_option": "Augmentation des tempêtes"
-                },
-                {
-                    "texte_option": "Réduction de la biodiversité"
-                },
-                {
-                    "texte_option": "Augmentation de la pollution de l'air"
-                }
+                "Élévation du niveau de la mer",
+                "Augmentation des tempêtes",
+                "Réduction de la biodiversité",
+                "Augmentation de la pollution de l'air"
             ],
             "explication": "La fonte des glaces polaires entraîne une élévation du niveau de la mer, affectant les zones côtières et les écosystèmes marins.",
             "image_base": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -43,20 +27,12 @@
             "image_mauvaise_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400"
         },
         {
-            "question_3": "Quel est l'impact principal de la pollution par le plastique ?",
+            "question": "Quel est l'impact principal de la pollution par le plastique ?",
             "options": [
-                {
-                    "texte_option": "Destruction des habitats marins"
-                },
-                {
-                    "texte_option": "Réchauffement climatique"
-                },
-                {
-                    "texte_option": "Augmentation des maladies respiratoires"
-                },
-                {
-                    "texte_option": "Épuisement des ressources en eau"
-                }
+                "Destruction des habitats marins",
+                "Réchauffement climatique",
+                "Augmentation des maladies respiratoires",
+                "Épuisement des ressources en eau"
             ],
             "explication": "La pollution par le plastique entraîne la destruction des habitats marins, affectant la biodiversité et les chaînes alimentaires marines.",
             "image_base": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -64,20 +40,12 @@
             "image_mauvaise_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400"
         },
         {
-            "question_4": "Quelle est une conséquence directe de l'utilisation excessive de fertilisants chimiques ?",
+            "question": "Quelle est une conséquence directe de l'utilisation excessive de fertilisants chimiques ?",
             "options": [
-                {
-                    "texte_option": "Création de zones mortes dans les océans"
-                },
-                {
-                    "texte_option": "Amélioration de la qualité de l'air"
-                },
-                {
-                    "texte_option": "Augmentation de la biodiversité"
-                },
-                {
-                    "texte_option": "Réduction de la pollution de l'eau"
-                }
+                "Création de zones mortes dans les océans",
+                "Amélioration de la qualité de l'air",
+                "Augmentation de la biodiversité",
+                "Réduction de la pollution de l'eau"
             ],
             "explication": "L'utilisation excessive de fertilisants chimiques entraîne un ruissellement qui aboutit à la création de zones mortes dans les océans, où la vie marine ne peut pas survivre.",
             "image_base": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -85,20 +53,12 @@
             "image_mauvaise_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400"
         },
         {
-            "question_5": "Quel est l'effet du changement climatique sur les océans ?",
+            "question": "Quel est l'effet du changement climatique sur les océans ?",
             "options": [
-                {
-                    "texte_option": "Réduction de la biodiversité marine"
-                },
-                {
-                    "texte_option": "Augmentation de la salinité"
-                },
-                {
-                    "texte_option": "Diminution de la température de l'eau"
-                },
-                {
-                    "texte_option": "Augmentation de la quantité de poissons"
-                }
+                "Réduction de la biodiversité marine",
+                "Augmentation de la salinité",
+                "Diminution de la température de l'eau",
+                "Augmentation de la quantité de poissons"
             ],
             "explication": "Le changement climatique entraîne une réduction de la biodiversité marine, due à des phénomènes comme l'acidification des océans et le blanchissement des coraux.",
             "image_base": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -108,20 +68,12 @@
     ],
     "qcm_2": [
         {
-            "question_1": "Quelle est la principale cause du réchauffement climatique actuel ?",
+            "question": "Quelle est la principale cause du réchauffement climatique actuel ?",
             "options": [
-                {
-                    "texte_option": "Émissions de gaz à effet de serre"
-                },
-                {
-                    "texte_option": "Éruption volcanique"
-                },
-                {
-                    "texte_option": "Déforestation"
-                },
-                {
-                    "texte_option": "Utilisation accrue de la technologie"
-                }
+                "Emissions de gaz à effet de serre",
+                "Éruption volcanique",
+                "Déforestation",
+                "Utilisation accrue de la technologie"
             ],
             "explication": "Les émissions de gaz à effet de serre sont la principale cause du réchauffement climatique, notamment dues à la combustion de combustibles fossiles.",
             "image_base": "",
@@ -129,20 +81,12 @@
             "image_mauvaise_reponse": ""
         },
         {
-            "question_2": "Quel est l'objectif principal des énergies renouvelables ?",
+            "question": "Quel est l'objectif principal des énergies renouvelables ?",
             "options": [
-                {
-                    "texte_option": "Réduire les émissions de CO2"
-                },
-                {
-                    "texte_option": "Réduire la dépendance au pétrole"
-                },
-                {
-                    "texte_option": "Augmenter la production industrielle"
-                },
-                {
-                    "texte_option": "Créer des emplois"
-                }
+                "Réduire les émissions de CO2",
+                "Réduire la dépendance au pétrole",
+                "Augmenter la production industrielle",
+                "Créer des emplois"
             ],
             "explication": "L'objectif principal des énergies renouvelables est de réduire les émissions de CO2, contribuant ainsi à la lutte contre le changement climatique.",
             "image_base": "",
@@ -150,20 +94,12 @@
             "image_mauvaise_reponse": ""
         },
         {
-            "question_3": "Quelle pratique agricole est la plus favorable à l'environnement ?",
+            "question": "Quelle pratique agricole est la plus favorable à l'environnement ?",
             "options": [
-                {
-                    "texte_option": "Agriculture biologique"
-                },
-                {
-                    "texte_option": "Agriculture intensive"
-                },
-                {
-                    "texte_option": "Utilisation de pesticides"
-                },
-                {
-                    "texte_option": "Monoculture"
-                }
+                "Agriculture biologique",
+                "Agriculture intensive",
+                "Utilisation de pesticides",
+                "Monoculture"
             ],
             "explication": "L'agriculture biologique, qui utilise moins de produits chimiques et favorise la diversité des cultures, est plus bénéfique pour l'environnement.",
             "image_base": "",
@@ -171,20 +107,12 @@
             "image_mauvaise_reponse": ""
         },
         {
-            "question_4": "Quel phénomène est directement lié à la perte de biodiversité ?",
+            "question": "Quel phénomène est directement lié à la perte de biodiversité ?",
             "options": [
-                {
-                    "texte_option": "Urbanisation"
-                },
-                {
-                    "texte_option": "Utilisation de fertilisants"
-                },
-                {
-                    "texte_option": "Réseaux sociaux"
-                },
-                {
-                    "texte_option": "Voyage spatial"
-                }
+                "Urbanisation",
+                "Utilisation de fertilisants",
+                "Réseaux sociaux",
+                "Voyage spatial"
             ],
             "explication": "L'urbanisation, en transformant et fragmentant les habitats naturels, est un facteur majeur de la perte de biodiversité.",
             "image_base": "",
@@ -192,20 +120,12 @@
             "image_mauvaise_reponse": ""
         },
         {
-            "question_5": "Quelle action individuelle peut réduire l'empreinte carbone ?",
+            "question": "Quelle action individuelle peut réduire l'empreinte carbone ?",
             "options": [
-                {
-                    "texte_option": "Utilisation de transports en commun"
-                },
-                {
-                    "texte_option": "Augmentation de la consommation de viande"
-                },
-                {
-                    "texte_option": "Achat de produits jetables"
-                },
-                {
-                    "texte_option": "Utilisation accrue de climatisation"
-                }
+                "Utilisation de transports en commun",
+                "Augmentation de la consommation de viande",
+                "Achat de produits jetables",
+                "Utilisation accrue de climatisation"
             ],
             "explication": "L'utilisation de transports en commun réduit l'empreinte carbone en diminuant la dépendance aux véhicules individuels et la consommation de carburant fossile.",
             "image_base": "",
@@ -215,20 +135,12 @@
     ],
     "qcm_3": [
         {
-            "question_1": "Quelle pourrait être la conséquence d'une augmentation continue des émissions de gaz à effet de serre ?",
+            "question": "Quelle pourrait être la conséquence d'une augmentation continue des émissions de gaz à effet de serre ?",
             "options": [
-                {
-                    "texte_option": "Augmentation du niveau de la mer"
-                },
-                {
-                    "texte_option": "Stabilisation du climat mondial"
-                },
-                {
-                    "texte_option": "Réduction des tempêtes extrêmes"
-                },
-                {
-                    "texte_option": "Amélioration de la qualité de l'air"
-                }
+                "Augmentation du niveau de la mer",
+                "Sensibilisation du climat mondial",
+                "Réduction des tempêtes extrêmes",
+                "Amélioration de la qualité de l'air"
             ],
             "explication": "Une augmentation continue des émissions de gaz à effet de serre entraînera probablement une élévation du niveau de la mer, menaçant les zones côtières.",
             "image_base": "",
@@ -236,20 +148,12 @@
             "image_mauvaise_reponse": ""
         },
         {
-            "question_2": "Quel impact aura l'extinction accélérée des espèces sur les écosystèmes ?",
+            "question": "Quel impact aura l'extinction accélérée des espèces sur les écosystèmes ?",
             "options": [
-                {
-                    "texte_option": "Perturbation des équilibres écologiques"
-                },
-                {
-                    "texte_option": "Renforcement des chaînes alimentaires"
-                },
-                {
-                    "texte_option": "Augmentation de la biodiversité"
-                },
-                {
-                    "texte_option": "Diminution des maladies animales"
-                }
+                "Perturbation des équilibres écologiques",
+                "Renforcement des chaînes alimentaires",
+                "Augmentation de la biodiversité",
+                "Diminution des maladies animales"
             ],
             "explication": "L'extinction accélérée des espèces perturbera les équilibres écologiques, menaçant la santé des écosystèmes et de leurs fonctions.",
             "image_base": "",
@@ -257,20 +161,12 @@
             "image_mauvaise_reponse": ""
         },
         {
-            "question_3": "Quel sera l'effet du changement climatique sur les ressources en eau douce ?",
+            "question": "Quel sera l'effet du changement climatique sur les ressources en eau douce ?",
             "options": [
-                {
-                    "texte_option": "Diminution de la disponibilité"
-                },
-                {
-                    "texte_option": "Augmentation de la disponibilité"
-                },
-                {
-                    "texte_option": "Stabilisation des réserves d'eau"
-                },
-                {
-                    "texte_option": "Réduction de la pollution de l'eau"
-                }
+                "Diminution de la disponibilité",
+                "Augmentation de la disponibilité",
+                "Stabilisation des réserves d'eau",
+                "Réduction de la pollution de l'eau"
             ],
             "explication": "Le changement climatique est susceptible de réduire la disponibilité de l'eau douce, aggravant les problèmes de sécheresse et d'accès à l'eau.",
             "image_base": "",
@@ -278,20 +174,12 @@
             "image_mauvaise_reponse": ""
         },
         {
-            "question_4": "Quelle pourrait être la conséquence de l'augmentation des températures mondiales sur l'agriculture ?",
+            "question": "Quelle pourrait être la conséquence de l'augmentation des températures mondiales sur l'agriculture ?",
             "options": [
-                {
-                    "texte_option": "Perte de terres cultivables"
-                },
-                {
-                    "texte_option": "Amélioration des rendements agricoles"
-                },
-                {
-                    "texte_option": "Diminution des besoins en irrigation"
-                },
-                {
-                    "texte_option": "Réduction de l'utilisation des pesticides "
-                }
+                "Perte de terres cultivables",
+                "Amélioration des rendements agricoles",
+                "Diminution des besoins en irrigation",
+                "Réduction de l'utilisation des pesticides"
             ],
             "explication": "L'augmentation des températures pourrait entraîner la perte de terres cultivables, en particulier dans les régions déjà confrontées à des stress climatiques.",
             "image_base": "",
@@ -299,20 +187,12 @@
             "image_mauvaise_reponse": ""
         },
         {
-            "question_5": "Quel sera l'impact du dégel du permafrost sur le climat ?",
+            "question": "Quel sera l'impact du dégel du permafrost sur le climat ?",
             "options": [
-                {
-                    "texte_option": "Libération de grandes quantités de méthane"
-                },
-                {
-                    "texte_option": "Réduction des émissions de gaz à effet de serre"
-                },
-                {
-                    "texte_option": "Amélioration de la qualité de l'air"
-                },
-                {
-                    "texte_option": "Stabilisation des températures mondiales"
-                }
+                "Libération de grandes quantités de méthane",
+                "Réduction des émissions de gaz à effet de serre",
+                "Amélioration de la qualité de l'air",
+                "Stabilisation des températures mondiales"
             ],
             "explication": "Le dégel du permafrost libérera de grandes quantités de méthane, un puissant gaz à effet de serre, exacerbant le réchauffement climatique.",
             "image_base": "",
