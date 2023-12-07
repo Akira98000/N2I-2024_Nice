@@ -64,3 +64,15 @@ button:active {
 #validate:active {
     background-color: #1e7e34;
 }
+
+#next {
+    background-color: #289aa7;
+}
+
+#next:hover {
+    background-color: #208590;
+}
+
+#next:active {
+    background-color: #1f747d;
+}

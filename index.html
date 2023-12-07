@@ -7,12 +7,6 @@
 <style>
   /* Add your CSS styling here */
 </style>
-<script>
-  // Add your JavaScript functions here
-  function validation() {
-    // Logic to handle the validation and transition to the explanation
-  }
-</script>
 </head>
 <body>
 
@@ -21,16 +15,17 @@
 <div class="bubble" id="bubble3"></div>
 
 <div id="question-container">
-    <img class="image" src="4.jpg" style="width: 37.5em; height: 21em;">
+    <img id="image" src="https://www.powertrafic.fr/wp-content/uploads/2023/04/image-ia-exemple.png" style="width: 37.5em; height: 21em;">
   <p>Question : <span id="question-text">Votre question ici?</span></p>
   <div>
 
-  <button onclick="validation()" class="reponse">Choix 1</button>
-  <button onclick="validation()" class="reponse">Choix 2</button>
-  <button onclick="validation()" class="reponse">Choix 3</button>
-  <button onclick="validation()" class="reponse">Choix 4</button></div>
-  <button onclick="validation()" id="validate">Valider</button>
+  <button class="reponse">Choix 1</button>
+  <button class="reponse">Choix 2</button>
+  <button class="reponse">Choix 3</button>
+  <button class="reponse">Choix 4</button></div>
+  <button id="validate">Valider</button>
+  <button id="next" style="display: none;">Question suivante</button>
 </div>
-
+  <script type="module" src="script.js"></script>
 </body>
 </html>
