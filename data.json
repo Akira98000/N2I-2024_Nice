@@ -105,5 +105,219 @@
             "image_bonne_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
             "image_mauvaise_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400"
         }
+    ],
+    "qcm_2": [
+        {
+            "question_1": "Quelle est la principale cause du réchauffement climatique actuel ?",
+            "options": [
+                {
+                    "texte_option": "Émissions de gaz à effet de serre"
+                },
+                {
+                    "texte_option": "Éruption volcanique"
+                },
+                {
+                    "texte_option": "Déforestation"
+                },
+                {
+                    "texte_option": "Utilisation accrue de la technologie"
+                }
+            ],
+            "explication": "Les émissions de gaz à effet de serre sont la principale cause du réchauffement climatique, notamment dues à la combustion de combustibles fossiles.",
+            "image_base": "",
+            "image_bonne_reponse": "",
+            "image_mauvaise_reponse": ""
+        },
+        {
+            "question_2": "Quel est l'objectif principal des énergies renouvelables ?",
+            "options": [
+                {
+                    "texte_option": "Réduire les émissions de CO2"
+                },
+                {
+                    "texte_option": "Réduire la dépendance au pétrole"
+                },
+                {
+                    "texte_option": "Augmenter la production industrielle"
+                },
+                {
+                    "texte_option": "Créer des emplois"
+                }
+            ],
+            "explication": "L'objectif principal des énergies renouvelables est de réduire les émissions de CO2, contribuant ainsi à la lutte contre le changement climatique.",
+            "image_base": "",
+            "image_bonne_reponse": "",
+            "image_mauvaise_reponse": ""
+        },
+        {
+            "question_3": "Quelle pratique agricole est la plus favorable à l'environnement ?",
+            "options": [
+                {
+                    "texte_option": "Agriculture biologique"
+                },
+                {
+                    "texte_option": "Agriculture intensive"
+                },
+                {
+                    "texte_option": "Utilisation de pesticides"
+                },
+                {
+                    "texte_option": "Monoculture"
+                }
+            ],
+            "explication": "L'agriculture biologique, qui utilise moins de produits chimiques et favorise la diversité des cultures, est plus bénéfique pour l'environnement.",
+            "image_base": "",
+            "image_bonne_reponse": "",
+            "image_mauvaise_reponse": ""
+        },
+        {
+            "question_4": "Quel phénomène est directement lié à la perte de biodiversité ?",
+            "options": [
+                {
+                    "texte_option": "Urbanisation"
+                },
+                {
+                    "texte_option": "Utilisation de fertilisants"
+                },
+                {
+                    "texte_option": "Réseaux sociaux"
+                },
+                {
+                    "texte_option": "Voyage spatial"
+                }
+            ],
+            "explication": "L'urbanisation, en transformant et fragmentant les habitats naturels, est un facteur majeur de la perte de biodiversité.",
+            "image_base": "",
+            "image_bonne_reponse": "",
+            "image_mauvaise_reponse": ""
+        },
+        {
+            "question_5": "Quelle action individuelle peut réduire l'empreinte carbone ?",
+            "options": [
+                {
+                    "texte_option": "Utilisation de transports en commun"
+                },
+                {
+                    "texte_option": "Augmentation de la consommation de viande"
+                },
+                {
+                    "texte_option": "Achat de produits jetables"
+                },
+                {
+                    "texte_option": "Utilisation accrue de climatisation"
+                }
+            ],
+            "explication": "L'utilisation de transports en commun réduit l'empreinte carbone en diminuant la dépendance aux véhicules individuels et la consommation de carburant fossile.",
+            "image_base": "",
+            "image_bonne_reponse": "",
+            "image_mauvaise_reponse": ""
+        }
+    ],
+    "qcm_3": [
+        {
+            "question_1": "Quelle pourrait être la conséquence d'une augmentation continue des émissions de gaz à effet de serre ?",
+            "options": [
+                {
+                    "texte_option": "Augmentation du niveau de la mer"
+                },
+                {
+                    "texte_option": "Stabilisation du climat mondial"
+                },
+                {
+                    "texte_option": "Réduction des tempêtes extrêmes"
+                },
+                {
+                    "texte_option": "Amélioration de la qualité de l'air"
+                }
+            ],
+            "explication": "Une augmentation continue des émissions de gaz à effet de serre entraînera probablement une élévation du niveau de la mer, menaçant les zones côtières.",
+            "image_base": "",
+            "image_bonne_reponse": "",
+            "image_mauvaise_reponse": ""
+        },
+        {
+            "question_2": "Quel impact aura l'extinction accélérée des espèces sur les écosystèmes ?",
+            "options": [
+                {
+                    "texte_option": "Perturbation des équilibres écologiques"
+                },
+                {
+                    "texte_option": "Renforcement des chaînes alimentaires"
+                },
+                {
+                    "texte_option": "Augmentation de la biodiversité"
+                },
+                {
+                    "texte_option": "Diminution des maladies animales"
+                }
+            ],
+            "explication": "L'extinction accélérée des espèces perturbera les équilibres écologiques, menaçant la santé des écosystèmes et de leurs fonctions.",
+            "image_base": "",
+            "image_bonne_reponse": "",
+            "image_mauvaise_reponse": ""
+        },
+        {
+            "question_3": "Quel sera l'effet du changement climatique sur les ressources en eau douce ?",
+            "options": [
+                {
+                    "texte_option": "Diminution de la disponibilité"
+                },
+                {
+                    "texte_option": "Augmentation de la disponibilité"
+                },
+                {
+                    "texte_option": "Stabilisation des réserves d'eau"
+                },
+                {
+                    "texte_option": "Réduction de la pollution de l'eau"
+                }
+            ],
+            "explication": "Le changement climatique est susceptible de réduire la disponibilité de l'eau douce, aggravant les problèmes de sécheresse et d'accès à l'eau.",
+            "image_base": "",
+            "image_bonne_reponse": "",
+            "image_mauvaise_reponse": ""
+        },
+        {
+            "question_4": "Quelle pourrait être la conséquence de l'augmentation des températures mondiales sur l'agriculture ?",
+            "options": [
+                {
+                    "texte_option": "Perte de terres cultivables"
+                },
+                {
+                    "texte_option": "Amélioration des rendements agricoles"
+                },
+                {
+                    "texte_option": "Diminution des besoins en irrigation"
+                },
+                {
+                    "texte_option": "Réduction de l'utilisation des pesticides "
+                }
+            ],
+            "explication": "L'augmentation des températures pourrait entraîner la perte de terres cultivables, en particulier dans les régions déjà confrontées à des stress climatiques.",
+            "image_base": "",
+            "image_bonne_reponse": "",
+            "image_mauvaise_reponse": ""
+        },
+        {
+            "question_5": "Quel sera l'impact du dégel du permafrost sur le climat ?",
+            "options": [
+                {
+                    "texte_option": "Libération de grandes quantités de méthane"
+                },
+                {
+                    "texte_option": "Réduction des émissions de gaz à effet de serre"
+                },
+                {
+                    "texte_option": "Amélioration de la qualité de l'air"
+                },
+                {
+                    "texte_option": "Stabilisation des températures mondiales"
+                }
+            ],
+            "explication": "Le dégel du permafrost libérera de grandes quantités de méthane, un puissant gaz à effet de serre, exacerbant le réchauffement climatique.",
+            "image_base": "",
+            "image_bonne_reponse": "",
+            "image_mauvaise_reponse": ""
+        }
     ]
 }
