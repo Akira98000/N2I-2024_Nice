@@ -4,8 +4,7 @@
             "question_1": "Quel gaz à effet de serre a l'impact le plus important sur le réchauffement climatique ?",
             "options": [
                 {
-                    "texte_option": "Dioxyde de carbone (CO2)",
-                    "est_correcte": true
+                    "texte_option": "Dioxyde de carbone (CO2)"
                 },
                 {
                     "texte_option": "Méthane (CH4)"
@@ -18,6 +17,90 @@
                 }
             ],
             "explication": "Le CO2, bien que moins puissant que certains autres gaz à effet de serre, est le plus abondant et a donc le plus grand impact sur le réchauffement climatique.",
+            "image_base": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
+            "image_bonne_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
+            "image_mauvaise_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400"
+        },
+        {
+            "question_2": "Quelle est la conséquence la plus directe de la fonte des glaces polaires ?",
+            "options": [
+                {
+                    "texte_option": "Élévation du niveau de la mer"
+                },
+                {
+                    "texte_option": "Augmentation des tempêtes"
+                },
+                {
+                    "texte_option": "Réduction de la biodiversité"
+                },
+                {
+                    "texte_option": "Augmentation de la pollution de l'air"
+                }
+            ],
+            "explication": "La fonte des glaces polaires entraîne une élévation du niveau de la mer, affectant les zones côtières et les écosystèmes marins.",
+            "image_base": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
+            "image_bonne_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
+            "image_mauvaise_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400"
+        },
+        {
+            "question_3": "Quel est l'impact principal de la pollution par le plastique ?",
+            "options": [
+                {
+                    "texte_option": "Destruction des habitats marins"
+                },
+                {
+                    "texte_option": "Réchauffement climatique"
+                },
+                {
+                    "texte_option": "Augmentation des maladies respiratoires"
+                },
+                {
+                    "texte_option": "Épuisement des ressources en eau"
+                }
+            ],
+            "explication": "La pollution par le plastique entraîne la destruction des habitats marins, affectant la biodiversité et les chaînes alimentaires marines.",
+            "image_base": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
+            "image_bonne_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
+            "image_mauvaise_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400"
+        },
+        {
+            "question_4": "Quelle est une conséquence directe de l'utilisation excessive de fertilisants chimiques ?",
+            "options": [
+                {
+                    "texte_option": "Création de zones mortes dans les océans"
+                },
+                {
+                    "texte_option": "Amélioration de la qualité de l'air"
+                },
+                {
+                    "texte_option": "Augmentation de la biodiversité"
+                },
+                {
+                    "texte_option": "Réduction de la pollution de l'eau"
+                }
+            ],
+            "explication": "L'utilisation excessive de fertilisants chimiques entraîne un ruissellement qui aboutit à la création de zones mortes dans les océans, où la vie marine ne peut pas survivre.",
+            "image_base": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
+            "image_bonne_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
+            "image_mauvaise_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400"
+        },
+        {
+            "question_5": "Quel est l'effet du changement climatique sur les océans ?",
+            "options": [
+                {
+                    "texte_option": "Réduction de la biodiversité marine"
+                },
+                {
+                    "texte_option": "Augmentation de la salinité"
+                },
+                {
+                    "texte_option": "Diminution de la température de l'eau"
+                },
+                {
+                    "texte_option": "Augmentation de la quantité de poissons"
+                }
+            ],
+            "explication": "Le changement climatique entraîne une réduction de la biodiversité marine, due à des phénomènes comme l'acidification des océans et le blanchissement des coraux.",
             "image_base": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
             "image_bonne_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
             "image_mauvaise_reponse": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400"
