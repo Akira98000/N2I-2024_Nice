@@ -1,42 +1,3 @@
-/*class Quizz {
-    constructor(name) {
-        this.name = name;
-        this.score
-        this.questionIndex
-        this.bonne_reponse
-        this.file = JSON.parse(fs.readFileSync(name));
-    }
-
-    loadQuizz(quizz) {
-        score = 0
-        questionIndex = 0
-
-        let image = document.getElementById("image");
-        image.src = file[quizz][questionIndex].options
-        let reponses = [...document.getElementsByClassName("reponse")];
-        let question = document.getElementById("question");
-        bonne_reponse = file[quizz][questionIndex].options[0].texte_option
-        reponses.forEach()
-    }
-
-    checkReponse(event) {
-        if (event.target.textContent) {
-
-        } 
-    }
-}
-
-quizz = new Quizz("data.json");
-
-console.log("test")
-
-let reponses = [...document.getElementsByClassName("reponse")];
-console.log(reponses)
-reponses.forEach((rep) => {
-    rep.addEventListener("click", quizz.checkReponse);
-    console.log("tests")
-});*/
-
 let bonne_reponse
 let reponses = [...document.getElementsByClassName("reponse")];
 let question_index = 0
@@ -54,15 +15,28 @@ xhr.onreadystatechange = function() {
 xhr.send()
 
 let nextButton = document.getElementById("next");
-const checkReponse = (event) => { 
-    nextButton.style.display = "block"
-    if (event.target.textContent === bonne_reponse) {
+let validateButton = document.getElementById("validate");
 
-    } 
+const checkReponse = (event) => { 
+    validateButton.disabled = true
+    nextButton.style.display = "block"
+    let reponse = document.getElementsByClassName("selected-reponse")[0]
+    if (reponse.textContent === bonne_reponse) {
+        reponse.classList.add("right-reponse");
+    } else {
+        reponse.classList.add("bad-reponse");
+    }
+
     question_index++;
 }
 
+validateButton.addEventListener("click", checkReponse);
+
 nextButton.addEventListener("click", () => {
+    reponses.forEach((rep) => {
+        rep.classList.remove("selected-reponse", "right-reponse", "bad-reponse")
+    })    
+    validateButton.disabled = true;
     nextButton.style.display = "none";
     loadQuestion(question_index);
 })
@@ -74,7 +48,7 @@ const loadQuestion = (index) => {
     let question = document.getElementById("question-text");
     question.textContent = data["qcm_1"][index].question
 
-    let bonne_reponse = data["qcm_1"][index].options[0];
+    bonne_reponse = data["qcm_1"][index].options[0];
     data["qcm_1"][index].options.sort(() => Math.random() - 0.5);
 
     for (let i = 0; i < 4; i++)
@@ -82,5 +56,9 @@ const loadQuestion = (index) => {
 }
 
 reponses.forEach((rep) => {
-    rep.addEventListener("click", checkReponse);
+    rep.addEventListener("click", () => {
+        validateButton.disabled = false
+        reponses.forEach((srep) => srep.classList.remove("selected-reponse"));
+        rep.classList.add("selected-reponse");
+    });
 });
