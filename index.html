@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      overflow: hidden; /* Désactiver le défilement de la page */
+    }
+
+    #canvas-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    #info {
+    position: absolute;
+    top: 500px;
+    left: 1500px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    display: flex;
+    font-weight: bold; /* Met en gras */
+    font-size: 50px; /* Taille de police très grosse (ajustez selon vos besoins) */
+    color: beige;
+}
+
+  </style>
+</head>
+<body>
+  <div id="canvas-container"></div>
+  <div id="info">Earth</div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
