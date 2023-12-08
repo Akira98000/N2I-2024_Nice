@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon jeu</title>
-    <link rel="stylesheet" href="style.css"> <!-- Nous créerons un fichier CSS séparé pour les styles -->
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="score">Score : 0</h1>
+    <div id="header">
+        <a href="../index.html" id="linkButton">Retour</a>
+        <div id="titles">
+            <h1 id="score">Score : 0</h1>
+            <h1 id="highscore">Meilleur score : 0</h1>
+        </div>
+    </div>
     <canvas id="game"></canvas>
     <script type="module" src="game.js"></script>
 </body>
