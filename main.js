@@ -91,7 +91,32 @@ document.addEventListener("wheel", function (event) {
             document.body.removeChild(previousInfoElement);
         }
 
-        if (scrollPosition <= 1) {
+        // Vérifier si la position de défilement est entre 0 et 1
+        if (scrollPosition === 0) {
+
+          // Récupérer l'élément avec l'ID "info"
+          const infoElement = document.getElementById('info');
+
+          if (!infoElement) {
+            // Créer un nouvel élément HTML avec l'ID "info"
+            const newInfoElement = document.createElement('div');
+            newInfoElement.id = 'info';
+            newInfoElement.textContent = 'Pensez à scroller'; // Ajoutez le contenu souhaité
+
+            // Ajouter le nouvel élément au body du document
+            document.body.appendChild(newInfoElement);
+
+            // Utiliser GSAP pour animer l'entrée de l'élément
+            TweenMax.to(newInfoElement, 1, {
+              opacity: 1,
+              y: 20,  // Réinitialiser la propriété Y à 0
+              ease: Power2.easeOut
+            });
+          }
+        }
+
+        if (scrollPosition >= 1) {
+          console.log("supprime")
             // Supprimer l'élément avec l'ID "info"
             const infoElementToRemove = document.getElementById('info');
             if (infoElementToRemove) {
@@ -109,10 +134,10 @@ document.addEventListener("wheel", function (event) {
         }
 
         // Afficher le texte seulement lorsque scrollPosition est égal à 5 ou 10
-        if (scrollPosition === 5 || scrollPosition === 10) {
+        if (scrollPosition == 7 || scrollPosition == 12) {
             // Créer un élément HTML pour le texte
             const infoElement = document.createElement('div');
-            const infoId = scrollPosition==5 ? 'infoRight' : 'infoLeft';
+            const infoId = scrollPosition==7 ? 'infoRight' : 'infoLeft';
             infoElement.id = infoId;
             infoElement.innerHTML = direction > 0
                 ? "Changeons le monde," + "<br>" + "un clic à la fois!"
