@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="style.css" type="text/css" />
-<script src="./konami.js"></script>
 <title>Quizz 1</title>
 <style>
   /* Add your CSS styling here */
@@ -11,7 +10,7 @@
 </head>
 <body>
 <div id="anim-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
-<div id="sup" style="z-index: 2;"></div>
+<div id="sup" style="z-index: 2;">
 <div id="question-container">
     <img id="image" src="https://www.powertrafic.fr/wp-content/uploads/2023/04/image-ia-exemple.png" style="width: 37.5em; height: 21em;">
   <p>Question : <span id="question-text">Votre question ici?</span></p>
@@ -20,9 +19,12 @@
   <button class="reponse">Choix 1</button>
   <button class="reponse">Choix 2</button>
   <button class="reponse">Choix 3</button>
-  <button class="reponse">Choix 4</button></div>
+  <button class="reponse">Choix 4</button>
+  <div id="para"><p></p></div></div>
   <button disabled id="validate">Valider</button>
+  <button id="retour">Retour</button>
   <button id="next" style="display: none;">Question suivante</button>
+</div>
 </div>
   <script src="script.js"> </script>
 </body>
