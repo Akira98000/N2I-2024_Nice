@@ -8,6 +8,9 @@ function load_quizz(quizz) {
     let question_index = 0
     let data
     let explication
+    const element = document.body; 
+    let bubbleInterval, feuilleInterval, nuageInterval, neigeInterval, noelInterval;
+
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'data.json', true);
@@ -22,13 +25,16 @@ function load_quizz(quizz) {
 
     let nextButton = document.getElementById("next");
     let validateButton = document.getElementById("validate");
+    let retourButton = document.getElementById("retour");
+    retourButton.style.display="none";
     let image = document.getElementById("image");
 
     const checkReponse = (event) => { 
         validateButton.disabled = true
         question_index++;
         if (question_index < data[quizz].length)
-            nextButton.style.display = "block"
+            nextButton.style.display = "inline"
+            validateButton.style.display = "none";
         let reponse = document.getElementsByClassName("selected-reponse")[0]
         // si bonne reponse selectionne
         if (reponse.textContent === bonne_reponse) {
@@ -39,6 +45,7 @@ function load_quizz(quizz) {
             // mettre ne rouge la reponse selectionnee (fausse)
             reponse.classList.add("bad-reponse");
             // surligner la bonne reponse
+            
             reponses.forEach((rep) => {
                 if (rep.textContent === bonne_reponse) {
                     rep.classList.add("right-reponse");
@@ -58,14 +65,26 @@ function load_quizz(quizz) {
 
     nextButton.addEventListener("click", () => {
         reponses.forEach((rep) => {
-            rep.classList.remove("selected-reponse", "right-reponse", "bad-reponse")
+            rep.classList.remove("selected-reponse", "right-reponse", "bad-reponse");
+            
         })    
         validateButton.disabled = true;
         nextButton.style.display = "none";
-        loadQuestion(question_index);
+        //validateButton.style.display = "none";
+
+
+        console.log(question_index);
+        console.log(data[quizz].length);
+        if (question_index >= data[quizz].length-1) {
+            retourButton.style.display = "block";
+            //validateButton.style.display = "none";
+        } else {
+            loadQuestion(question_index);
+        }
     })
 
     const loadQuestion = (index) => { 
+        validateButton.style.display = "inline";
         document.getElementById("para").querySelector("p").style.display="none";
         document.getElementById("para").querySelector("p").textContent = "";
         image.src = "./img/" + data[quizz][index].image_base
@@ -79,8 +98,7 @@ function load_quizz(quizz) {
         explication = data[quizz][index].explication;
 
         them = data[quizz][index].theme;
-        const element = document.body; 
-        let bubbleInterval, feuilleInterval, nuageInterval, neigeInterval, noelInterval;
+
 
         switch(them){
             case "1":
