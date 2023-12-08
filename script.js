@@ -26,6 +26,7 @@ function load_quizz(quizz) {
 
     const checkReponse = (event) => { 
         validateButton.disabled = true
+        reponses.forEach((rep) => rep.disabled = true)
         question_index++;
         if (question_index < data[quizz].length)
             nextButton.style.display = "block"
@@ -43,7 +44,8 @@ function load_quizz(quizz) {
 
     nextButton.addEventListener("click", () => {
         reponses.forEach((rep) => {
-            rep.classList.remove("selected-reponse", "right-reponse", "bad-reponse")
+            rep.classList.remove("selected-reponse", "right-reponse", "bad-reponse");
+            rep.disabled = false
         })    
         validateButton.disabled = true;
         nextButton.style.display = "none";
