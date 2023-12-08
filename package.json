@@ -10,4 +10,10 @@
   "devDependencies": {
     "vite": "^5.0.6"
   }
+  "scripts": {
+    "deploy": "vercel --prod",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  }
 }
