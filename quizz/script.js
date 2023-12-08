@@ -1,4 +1,5 @@
 
+
 load_quizz("qcm_1");
 
 function load_quizz(quizz) {
@@ -49,7 +50,7 @@ function load_quizz(quizz) {
             reponses.forEach((rep) => {
                 if (rep.textContent === bonne_reponse) {
                     rep.classList.add("right-reponse");
-                    if (question_index >= data[quizz].length-1) {
+                    if (question_index >= data[quizz].length) {
                         retourButton.style.display = "block";
                         //validateButton.style.display = "none";
                     } 
@@ -67,6 +68,9 @@ function load_quizz(quizz) {
 
     validateButton.addEventListener("click", checkReponse);
 
+    document.getElementById('retour').addEventListener('click', function() {
+        window.location.href = 'quiz_menu.html'; // Remplacez 'page2.html' par le chemin de votre fichier HTML
+    });
     nextButton.addEventListener("click", () => {
         reponses.forEach((rep) => {
             rep.classList.remove("selected-reponse", "right-reponse", "bad-reponse");
