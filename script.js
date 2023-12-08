@@ -16,18 +16,21 @@ xhr.send()
 
 let nextButton = document.getElementById("next");
 let validateButton = document.getElementById("validate");
+let image = document.getElementById("image");
 
 const checkReponse = (event) => { 
     validateButton.disabled = true
-    nextButton.style.display = "block"
+    question_index++;
+    if (question_index < data["qcm_1"].length)
+        nextButton.style.display = "block"
     let reponse = document.getElementsByClassName("selected-reponse")[0]
     if (reponse.textContent === bonne_reponse) {
         reponse.classList.add("right-reponse");
+        image.src = "./img/" + data["qcm_1"][question_index-1].image_bonne_reponse
     } else {
         reponse.classList.add("bad-reponse");
+        image.src = "./img/" + data["qcm_1"][question_index-1].image_mauvaise_reponse
     }
-
-    question_index++;
 }
 
 validateButton.addEventListener("click", checkReponse);
@@ -42,8 +45,7 @@ nextButton.addEventListener("click", () => {
 })
 
 const loadQuestion = (index) => { 
-    let image = document.getElementById("image");
-    image.src = data["qcm_1"][index].image_base
+    image.src = "./img/" + data["qcm_1"][index].image_base
 
     let question = document.getElementById("question-text");
     question.textContent = data["qcm_1"][index].question
