@@ -68,7 +68,7 @@
             "image_base": "effet_base.png",
             "image_bonne_reponse": "effet_good.png",
             "image_mauvaise_reponse": "effet_bad.png",
-            "theme":"1"
+            "theme":"3"
         }
     ],
     "qcm_2": [

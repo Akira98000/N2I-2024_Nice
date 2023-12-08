@@ -49,6 +49,10 @@ function load_quizz(quizz) {
             reponses.forEach((rep) => {
                 if (rep.textContent === bonne_reponse) {
                     rep.classList.add("right-reponse");
+                    if (question_index >= data[quizz].length-1) {
+                        retourButton.style.display = "block";
+                        //validateButton.style.display = "none";
+                    } 
                 }
             });
         
@@ -75,12 +79,9 @@ function load_quizz(quizz) {
 
         console.log(question_index);
         console.log(data[quizz].length);
-        if (question_index >= data[quizz].length-1) {
-            retourButton.style.display = "block";
-            //validateButton.style.display = "none";
-        } else {
+
             loadQuestion(question_index);
-        }
+
     })
 
     const loadQuestion = (index) => { 
