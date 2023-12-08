@@ -5,11 +5,12 @@
     "gsap": "^3.12.3",
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",
-    "three": "^0.159.0"
+    "three": "^0.159.0",
+    "vercel": "^32.6.1"
   },
   "devDependencies": {
     "vite": "^5.0.6"
-  }
+  },
   "scripts": {
     "deploy": "vercel --prod",
     "dev": "vite",
