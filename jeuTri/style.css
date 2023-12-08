@@ -1,22 +1,58 @@
+/* Resets padding and margin to make sure no unwanted space is around elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* This ensures that padding does not affect the total width/height of elements */
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(0deg, rgb(97, 98, 99) 0%, rgba(0, 0, 0, 0) 100%);
+  overflow: hidden; /* Prevents scrolling if the canvas is large */
+}
+
+/* Positions the canvas at the very top of the page */
 canvas {
-    box-shadow: black 20px 10px 50px;
-  }
-  h1 {
-    margin: 0px;
-    margin-bottom: 10px;
-    font-size: 2.9em;
-    font-family: "Helvetica";
-  }
-  body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 0px;
-    margin: 0px;
-    height: 100vh;
-    background: linear-gradient(
-      0deg,
-      rgb(97, 98, 99) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
-  }
+  box-shadow: black 20px 10px 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto; /* Centers the canvas horizontally */
+}
+
+/* Positions the button and titles */
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensures it's above the canvas */
+}
+
+#linkButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Helvetica";
+  font-size: 1em;
+}
+
+#titles {
+  position: absolute;
+  top: 50px; /* Adjust this value so it's below the button */
+  left: 10px; /* Aligns with the button */
+  z-index: 10;
+}
+
+h1 {
+  font-size: 2.9em;
+  font-family: "Helvetica";
+  color: white;
+  line-height: 1.2; /* Adjusts the spacing between lines of text */
+}

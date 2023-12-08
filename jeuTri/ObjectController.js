@@ -53,7 +53,8 @@ export default class ObjectController {
           this.objects.splice(index, 1);
             if(!object.isEnemy())
             {
-                this.score.decrement(2);
+              this.score.reset(); // Réinitialise le score
+              this.score.decrement(1);
             }
         }
       });
