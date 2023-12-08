@@ -1,37 +1,128 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css" type="text/css" />
-<script src="konami.js"></script>
-<title>Questionnaire</title>
-<style>
-  /* Add your CSS styling here */
-</style>
-<script>
-  // Add your JavaScript functions here
-  function validation() {
-    // Logic to handle the validation and transition to the explanation
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="konami.js"></script>
+  <script src="https://unpkg.com/scrollmagic@2.0.8/scrollmagic/minified/ScrollMagic.min.js"></script>
+<script src="https://unpkg.com/scrollmagic@2.0.8/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+  <style>
+    * {
+      font-family: sans-serif;
+      font-size: 20px;
+      fill: #fff;
+    }
+
+    body {
+      height: 100vh;
+      margin: 0;
+      overflow: hidden; /* Désactiver le défilement de la page */
+    }
+ 
+    #canvas-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+ 
+  #infoRight {
+      position: absolute;
+      top: 45%;
+      left: 70%;
+      width: 100%;
+      width: 100%;
+      text-align: left;
+      z-index: 100;
+      display: flex;
+      font-weight: bold; /* Met en gras */
+      font-size: 50px; /* Taille de police très grosse (ajustez selon vos besoins) */
+      color: #777059;
   }
-</script>
+
+  #info {
+      position: absolute;
+      top: 5%;
+      left: 45%;
+      width: 100%;
+      width: 100%;
+      text-align: left;
+      z-index: 100;
+      display: flex;
+      font-weight: bold; /* Met en gras */
+      font-size: 50px; /* Taille de police très grosse (ajustez selon vos besoins) */
+      color: #777059;
+  }
+
+#infoLeft {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 100%;
+    width: 100%;
+    text-align: left;
+    z-index: 100;
+    display: flex;
+    font-weight: bold; /* Met en gras */
+    font-size: 50px; /* Taille de police très grosse (ajustez selon vos besoins) */
+    color: #777059;
+}
+
+
+/* nav css  */
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+  padding: 0.7rem 1rem;
+  z-index: 2;
+  position: fixed;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+  font-size: 1.2rem;
+}
+nav a {
+  background: transparent;
+  padding: 0.5rem 0.8rem;
+  border-radius: 100px;
+  display: flex;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+nav a:hover {
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+.active {
+  background-color: #B8E23A;
+  color: #ffffff;}
+
+ 
+  </style>
+
 </head>
 <body>
 
-<div class="bubble" id="bubble1"></div>
-<div class="bubble" id="bubble2"></div>
-<div class="bubble" id="bubble3"></div>
+  <nav>
+    <a id="nav-el" class="active" href="index.html">
+        <i class="bi bi-grid">Home</i></a>
+    <a id="nav-el" href="quizz/index.html">
+        <i class="bi bi-list-nested">Quiz</i></a>
+    <a id="nav-el" href="game.html">
+        <i class="bi bi-bookmark-check">Game</i></a>
+    <a id="nav-el" href="informations/index.html">
+        <i class="bi bi-bookmark-check">Infos</i></a>
+</nav>
 
-<div id="question-container">
-    <img class="image" src="4.jpg" style="width: 37.5em; height: 21em;">
-  <p>Question : <span id="question-text">Votre question ici?</span></p>
-  <div>
-
-  <button onclick="validation()" class="reponse">Choix 1</button>
-  <button onclick="validation()" class="reponse">Choix 2</button>
-  <button onclick="validation()" class="reponse">Choix 3</button>
-  <button onclick="validation()" class="reponse">Choix 4</button></div>
-  <button onclick="validation()" id="validate">Valider</button>
+<div id="info">
+  <h1>Pensez à scroller</h1>
 </div>
 
+  <div id="canvas-container"></div>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
+ 
