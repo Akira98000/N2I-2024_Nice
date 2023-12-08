@@ -1,21 +1,205 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #00159E; /* Couleur d'arrière-plan */
+   /*background-image: url('mer.png'); /* Image d'arrière-plan */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    /*background-attachment: fixed; /* Fixer l'image lors du défilement */
+    background-position: center; /* Centrer l'image */
+    overflow: hidden;
 }
-
 #question-container {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
     padding: 20px;
-    max-width: 600px;
-    text-align: center; /* Center aligns the container's content */
+    max-width: 50em;
+    max-height: 50em;
+    text-align: center;
+    z-index: 2;
 }
+
+#anim-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible; /* Assurez-vous que cela n'est pas caché */
+    z-index: 1; /* Ajustez le z-index si nécessaire */
+}
+
+#feuilles {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1
+}
+
+.feuille {
+    position: absolute;
+    width: 50px; /* Taille de la feuille */
+    height: 50px;
+    background-image: url('img/feuille.png'); /* Chemin vers votre image de feuille */
+    background-size: cover;
+    animation: chute 10s linear infinite;
+    z-index: 0;
+    /* Ajouter des animations pour la chute */
+}
+
+
+
+.neige {
+    position: absolute;
+    width: 50px; /* Taille de la feuille */
+    height: 50px;
+    background-image: url('img/neige.png'); /* Chemin vers votre image de feuille */
+    background-size: cover;
+    animation: chute 10s linear infinite;
+    z-index: 0;
+    /* Ajouter des animations pour la chute */
+}
+
+@keyframes chute {
+    0% { transform: translateY(0); opacity: 1 ; }
+    100% { transform: translateY(100vw); opacity: 0 ; }
+    
+}
+
+.nuage {
+    position: absolute;
+    background-image: url('img/nuage.png'); /* Remplacez par le chemin de votre image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px; /* Ajustez selon la taille de votre image */
+    height: 150px;
+    opacity: 0.7;
+    animation: deplacerNuage linear infinite;
+}
+.noel {
+    position: absolute;
+    background-image: url('img/noel.png'); /* Remplacez par le chemin de votre image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px; /* Ajustez selon la taille de votre image */
+    height: 150px;
+    opacity: 0.7;
+    animation: deplacerNuage linear infinite;
+}
+
+@keyframes deplacerNuage {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+  
+  #sup {
+    position: relative; /* Needed for z-index to work */
+    z-index: 2; /* Above the bubbles */
+  }
+  
 
 p {
     margin: 0;
     padding: 0;
+}
+
+.bubble {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: rise 15s infinite;
+}
+
+@keyframes rise {
+    0% {
+        bottom: -100px;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        bottom: 100vh;
+        transform: translateX(-20px);
+    }
+}
+
+/* Animation pour les feuilles tombantes */
+@keyframes fall {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Appliquer l'animation aux feuilles */
+.leaf {
+    /* Assurez-vous que ces valeurs correspondent à la taille réelle de l'image de la feuille */
+    width: 100px; /* Largeur de l'image de la feuille */
+    height: 100px; /* Hauteur de l'image de la feuille */
+    background-size: contain; /* Changez 100% en contain pour assurer que l'image est entièrement visible */
+    background-position: center;/* ou '100% 100%' pour couvrir la taille définie sans être coupé */
+    background-repeat: no-repeat; /* Pour éviter de répéter l'image si elle est plus petite que la taille définie */
+}
+
+
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    flex: 1 1 auto;
+    min-width: 100px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button:active {
+    background-color: #004085;
+    box-shadow: 0 5px 6px 0 rgba(0,0,0,0.24), 0 9px 30px 0 rgba(0,0,0,0.19);
+    transform: translateY(4px);
+}
+
+#validate {
+    background-color: #28a745;
+}
+
+#validate:hover {
+    background-color: #218838;
+}
+
+#validate:active {
+    background-color: #1e7e34;
 }
 
 /* Wrap buttons in a container */
@@ -42,45 +226,30 @@ button {
     min-width: 100px; /* Minimum width so buttons don't get too small */
 }
 
-<<<<<<< HEAD
 button:hover {
-=======
-button:not(:disabled):hover {
->>>>>>> quizz
-    background-color: #0056b3;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor: default;
 }
 
-<<<<<<< HEAD
-button:active {
-=======
+button:not(:disabled):hover {
+    background-color: #0056b3;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+
 button:not(:disabled):active {
->>>>>>> quizz
     background-color: #004085;
     box-shadow: 0 5px 6px 0 rgba(0,0,0,0.24), 0 9px 30px 0 rgba(0,0,0,0.19);
     transform: translateY(4px);
 }
-
-<<<<<<< HEAD
-=======
 .selected-reponse {
     background-color: #003165;
 }
 
->>>>>>> quizz
 #validate {
     background-color: #28a745;
 }
 
 #validate:hover {
-<<<<<<< HEAD
-    background-color: #218838;
-}
-
-#validate:active {
-    background-color: #1e7e34;
-}
-=======
     cursor: default;
 }
 
@@ -108,4 +277,3 @@ button:not(:disabled):active {
 .bad-reponse {
     background-color: red;
 }
->>>>>>> quizz
