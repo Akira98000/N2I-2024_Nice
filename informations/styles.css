@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap");
+
+
 body {
     display: flex;
     align-items: center;
@@ -5,6 +8,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 .titre {
@@ -15,18 +19,19 @@ body {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    perspective: 1000px;
+    gap: 100px;
+    max-width: 1500px;
+    perspective: 2000px;
 }
 
 .card {
-    width: 500px;
+    width: 650px;
     height: 200px;
     transform-style: preserve-3d;
     transition: transform 0.5s;
     cursor: pointer;
     position: relative;
+    
 }
 
 .front,
@@ -40,6 +45,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.5s;
     background-color: #f0f0f0;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
 }
 
 .back, .back-button {
@@ -53,13 +62,16 @@ body {
 .back-button {
     position: absolute;
     display: none;
-    bottom: 10px;
+    width: 100px;
+    height: 30px;
+    bottom: 5px;
     right: 10px;
-    padding: 10px;
+    padding: 5px;
     background-color: #3498db;
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 /* Ajouter ce style pour l'overlay */
@@ -101,4 +113,8 @@ body {
 
 .overlay-content .information {
     display: block; /* Display the .information div when inside the overlay content */
+}
+
+p {
+    text-justify: distribute;
 }
