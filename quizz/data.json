@@ -37,7 +37,7 @@
             "explication": "La pollution par le plastique entraîne la destruction des habitats marins, affectant la biodiversité et les chaînes alimentaires marines.",
             "image_base": "turtle_base.png",
             "image_bonne_reponse": "turtle_happy.png",
-            "image_mauvaise_reponse": "turtle_sad.png"
+            "image_mauvaise_reponse": "turtle_dead.png"
         },
         {
             "question": "Quelle est une conséquence directe de l'utilisation excessive de fertilisants chimiques ?",
