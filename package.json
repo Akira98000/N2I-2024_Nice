@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@tweenjs/tween.js": "^21.0.0",
+    "build": "^0.1.4",
     "gsap": "^3.12.3",
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",
