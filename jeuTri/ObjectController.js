@@ -43,6 +43,7 @@ export default class ObjectController {
             {
                 this.score.reset(); // Réinitialise le score
                 this.score.decrement(1); // Décrémente le score
+                this.score.setRaison("L'objet n'était pas à trier");
             }
             else this.score.increment(1); // Décrémente le score
         }
@@ -55,6 +56,7 @@ export default class ObjectController {
             {
               this.score.reset(); // Réinitialise le score
               this.score.decrement(1);
+              this.score.setRaison("L'objet était à trier");
             }
         }
       });

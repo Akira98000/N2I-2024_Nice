@@ -56,6 +56,7 @@ function game()
         ctx.fillText(text, canvas.width / 2, canvas.height / 4);
         objectController.stop();
         document.getElementById("score").innerHTML = "Score : " + 0;
+        ctx.fillText("Raison : " + score.getRaison() == "" ? "score < 0" : score.getRaison(), canvas.width / 2, canvas.height / 3);
         ctx.fillText("Cliquer pour redémarrer", canvas.width / 2, canvas.height / 2);
     }
     else

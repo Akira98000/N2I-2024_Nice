@@ -3,6 +3,7 @@ export default class Score
     constructor()
     {
         this.score = 0;
+        this.raison = "";
     }
 
     increment(score)
@@ -23,6 +24,16 @@ export default class Score
     reset()
     {
         this.score = 0;
+    }
+
+    setRaison(raison)
+    {
+        this.raison = raison;
+    }
+
+    getRaison()
+    {
+        return this.raison;
     }
 
 
