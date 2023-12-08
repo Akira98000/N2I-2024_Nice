@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,11 @@
   <script src="https://unpkg.com/scrollmagic@2.0.8/scrollmagic/minified/ScrollMagic.min.js"></script>
 <script src="https://unpkg.com/scrollmagic@2.0.8/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap");
     * {
-      font-family: sans-serif;
+      font-family: Poppins;
       font-size: 20px;
+      font-weight: 400;
       fill: #fff;
     }
 
@@ -24,49 +26,32 @@
       top: 0;
       left: 0;
     }
- 
+
   #infoRight {
-      position: absolute;
-      top: 45%;
-      left: 70%;
-      width: 100%;
-      width: 100%;
-      text-align: left;
-      z-index: 100;
-      display: flex;
-      font-weight: bold; /* Met en gras */
-      font-size: 50px; /* Taille de police très grosse (ajustez selon vos besoins) */
-      color: #777059;
+    position: absolute;
+    top: 36%;
+    right: 3%;
+    width: 25%;
+    text-align: left;
+    z-index: 100;
+    display: flex;
+    font-weight: bold;
+    font-size: 50px;
+    color: #777059;
   }
+
 
   #info {
       position: absolute;
       top: 5%;
-      left: 45%;
+      left: 46%;
       width: 100%;
       width: 100%;
       text-align: left;
       z-index: 100;
       display: flex;
-      font-weight: bold; /* Met en gras */
-      font-size: 50px; /* Taille de police très grosse (ajustez selon vos besoins) */
       color: #777059;
   }
-
-#infoLeft {
-    position: absolute;
-    top: 45%;
-    left: 5%;
-    width: 100%;
-    width: 100%;
-    text-align: left;
-    z-index: 100;
-    display: flex;
-    font-weight: bold; /* Met en gras */
-    font-size: 50px; /* Taille de police très grosse (ajustez selon vos besoins) */
-    color: #777059;
-}
-
 
 /* nav css  */
 nav {
@@ -91,6 +76,7 @@ nav a {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  font-style: normal;
 }
 nav a:hover {
   background: rgba(0, 0, 0, 0.3);
@@ -109,7 +95,7 @@ nav a:hover {
   <nav>
     <a id="nav-el" class="active" href="/index.html">
         <i class="bi bi-grid">Home</i></a>
-    <a id="nav-el" href="quizz/quiz_menu.html">
+    <a id="nav-el" href="/quizz/quiz_menu.html">
         <i class="bi bi-list-nested">Quiz</i></a>
     <a id="nav-el" href="game.html">
         <i class="bi bi-bookmark-check">Game</i></a>

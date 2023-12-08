@@ -71,6 +71,7 @@ document.addEventListener("scroll", function (event) {
     object3D.rotation.y = rotationSpeed;
   }
 });
+
 document.addEventListener("wheel", function (event) {
     if (object3D) {
         enableScroll = false;
@@ -91,44 +92,157 @@ document.addEventListener("wheel", function (event) {
             document.body.removeChild(previousInfoElement);
         }
 
-        if (scrollPosition <= 1) {
-            // Supprimer l'élément avec l'ID "info"
-            const infoElementToRemove = document.getElementById('info');
+        // Vérifier si la position de défilement est entre 0 et 1
+        if (scrollPosition === 0) {
+
+          // Récupérer l'élément avec l'ID "info"
+          const infoElement = document.getElementById('info');
+
+          if (!infoElement) {
+            // Créer un nouvel élément HTML avec l'ID "info"
+            const newInfoElement = document.createElement('div');
+            newInfoElement.id = 'info';
+            newInfoElement.textContent = 'Pensez à scroller'; // Ajoutez le contenu souhaité
+
+            // Ajouter le nouvel élément au body du document
+            document.body.appendChild(newInfoElement);
+
+            // Utiliser GSAP pour animer l'entrée de l'élément
+            TweenMax.to(newInfoElement, 1, {
+              opacity: 1,
+              y: 20,  // Réinitialiser la propriété Y à 0
+              ease: Power2.easeOut
+            });
+          }
+        }
+
+        if (scrollPosition >= 1) {
+          // Supprimer l'élément avec l'ID "info"
+          const infoElementToRemove = document.getElementById('info');
+          if (infoElementToRemove) {
+            // Utiliser GSAP pour animer la sortie de l'élément
+            TweenMax.to(infoElementToRemove, 1, {
+              opacity: 0,
+              y: -50,
+              ease: Power2.easeOut,
+              onComplete: function () {
+                // Une fois l'animation terminée, supprimer l'élément du DOM
+                if (infoElementToRemove.parentNode) {
+                  infoElementToRemove.parentNode.removeChild(infoElementToRemove);
+                }
+              }
+            });
+          }
+        }
+        
+        console.log(scrollPosition)
+
+        // Afficher le texte seulement lorsque scrollPosition est égal à 5 ou 10
+        if (scrollPosition == 5) {
+          if (direction === 1) {
+            const infoElementToRemove = document.getElementById('infoRight');
             if (infoElementToRemove) {
-                // Utiliser GSAP pour animer la sortie de l'élément
-                TweenMax.to(infoElementToRemove, 1, {
-                    opacity: 0,
-                    y: -50,
-                    ease: Power2.easeOut,
-                    onComplete: function () {
-                        // Une fois l'animation terminée, supprimer l'élément du DOM
-                        infoElementToRemove.parentNode.removeChild(infoElementToRemove);
-                    }
-                });
+              // Utiliser GSAP pour animer la sortie de l'élément
+              TweenMax.to(infoElementToRemove, 1, {
+                opacity: 0,
+                y: -50,
+                ease: Power2.easeOut,
+                onComplete: function () {
+                  // Une fois l'animation terminée, supprimer l'élément du DOM
+                  if (infoElementToRemove.parentNode) {
+                    infoElementToRemove.parentNode.removeChild(infoElementToRemove);
+                  }
+                }
+              });
+            }
+          } else {
+            const infoElementToRemove = document.getElementById('infoRight');
+          if (infoElementToRemove) {
+            // Utiliser GSAP pour animer la sortie de l'élément
+            TweenMax.to(infoElementToRemove, 1, {
+              opacity: 0,
+              y: 50,
+              ease: Power2.easeOut,
+              onComplete: function () {
+                // Une fois l'animation terminée, supprimer l'élément du DOM
+                if (infoElementToRemove.parentNode) {
+                  infoElementToRemove.parentNode.removeChild(infoElementToRemove);
+                }
+              }
+            });
+          }}
+            // Créer un élément HTML pour le texte
+            const infoElement = document.createElement('div');
+            const infoId = 'infoRight';
+            infoElement.id = infoId;
+            infoElement.innerHTML = direction > 0
+                ? "L'écologie, un enjeu majeur pour l'avenir de notre planète"
+                : '';
+  
+            infoElement.textContent;
+            document.body.appendChild(infoElement);
+  
+            // Animer le texte avec GSAP - fade in ou fade out
+            if (direction === 1) {
+              TweenMax.fromTo(infoElement, 1, { opacity: 0, y: 50 }, { opacity: 1, y: 0, ease: Power2.easeIn });
+            }
+            if (direction === -1) {
+              TweenMax.fromTo(infoElement, 1, { opacity: 1, y: 0 }, { opacity: 0, y: 50, ease: Power2.easeOut });
             }
         }
 
-        // Afficher le texte seulement lorsque scrollPosition est égal à 5 ou 10
-        if (scrollPosition === 5 || scrollPosition === 10) {
-            // Créer un élément HTML pour le texte
-            const infoElement = document.createElement('div');
-            const infoId = scrollPosition==5 ? 'infoRight' : 'infoLeft';
-            infoElement.id = infoId;
-            infoElement.innerHTML = direction > 0
-                ? "Changeons le monde," + "<br>" + "un clic à la fois!"
-                : 'Défilement haut';
+        if (scrollPosition == 25) {
+          if (direction === 1) {
+          const infoElementToRemove = document.getElementById('infoRight');
+          if (infoElementToRemove) {
+            // Utiliser GSAP pour animer la sortie de l'élément
+            TweenMax.to(infoElementToRemove, 1, {
+              opacity: 0,
+              y: -50,
+              ease: Power2.easeOut,
+              onComplete: function () {
+                // Une fois l'animation terminée, supprimer l'élément du DOM
+                if (infoElementToRemove.parentNode) {
+                  infoElementToRemove.parentNode.removeChild(infoElementToRemove);
+                }
+              }
+            });
+          }
+        } else {
+          const infoElementToRemove = document.getElementById('infoRight');
+        if (infoElementToRemove) {
+          // Utiliser GSAP pour animer la sortie de l'élément
+          TweenMax.to(infoElementToRemove, 1, {
+            opacity: 0,
+            y: 50,
+            ease: Power2.easeOut,
+            onComplete: function () {
+              // Une fois l'animation terminée, supprimer l'élément du DOM
+              if (infoElementToRemove.parentNode) {
+                infoElementToRemove.parentNode.removeChild(infoElementToRemove);
+              }
+            }
+          });
+        }}
+          // Créer un élément HTML pour le texte
+          const infoElement = document.createElement('div');
+          const infoId = 'infoRight';
+          infoElement.id = infoId;
+          infoElement.innerHTML = direction > 0
+              ? "Agissons, c'est urgent !"
+              : '';
 
-            infoElement.textContent;
-            document.body.appendChild(infoElement);
+          infoElement.textContent;
+          document.body.appendChild(infoElement);
 
-            // Animer le texte avec GSAP - fade in ou fade out
-            const animationType = direction > 0 ? 'easeIn' : 'easeOut';
-
-            // Inverser la direction du mouvement Y du texte
-            const yMovement = direction > 0 ? 50 : -50;
-
-            TweenMax.fromTo(infoElement, 1, { opacity: 0, y: yMovement }, { opacity: 1, y: 0, ease: Power2[animationType] });
-        }
+          // Animer le texte avec GSAP - fade in ou fade out
+          if (direction === 1) {
+            TweenMax.fromTo(infoElement, 1, { opacity: 0, y: 50 }, { opacity: 1, y: 0, ease: Power2.easeIn });
+          }
+          if (direction === -1) {
+            TweenMax.fromTo(infoElement, 1, { opacity: 1, y: 0 }, { opacity: 0, y: 50, ease: Power2.easeOut });
+          }
+      }
 
         // Activer le défilement lorsque l'interaction avec le modèle est terminée
         document.addEventListener("wheel", function () {
@@ -142,10 +256,6 @@ document.addEventListener("wheel", function (event) {
   // Déclarer la variable scrollPosition en dehors de l'événement
   let scrollPosition = 0;
  
-// Activer le défilement lorsque l'interaction avec le modèle est terminée
-document.addEventListener("wheel", function () {
-  enableScroll = true;
-});
 
 // Render loop
 const animate = function () {
