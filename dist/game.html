@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="/konami.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeu - N2I / DETENUS DE MVC</title>
+    
     <script src="https://kit.fontawesome.com/37d6505749.js" crossorigin="anonymous"></script>
 </head>
 
@@ -14,11 +16,14 @@
     margin: 0;
     padding: 0;
 }
+a {
+    font-size: 20px;
+}
 
 body {
     overflow-x: hidden;
     overflow-y: hidden;
-    background-color: rgb(115, 158, 201);
+    background-color: #eee1b3;
 }
 
 #name {
@@ -43,6 +48,9 @@ body {
     flex-direction: row; /* Align items horizontally */
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
+}
+.allPaths{
+    background-color: brown;
 }
 
 #itemRules{
@@ -105,23 +113,35 @@ path {
     <div id="timeCont">
         <div class =""> 
             <img src="img/eolienne.png" alt="Description of the image">
-            <button class="eol"> Acheter pour 700$</button>
+            <a class="eol"> Acheter pour 1000$</a>
         </div>
         <div class =""> 
             <img src="img/panneau.png" alt="Description of the image">
-            <button class="pann"> Acheter pour 200$</button>
+            <a class="pann"> Acheter pour 400$</a>
+        </div>
+        <div class =""> 
+            <img src="img/arbre.png" alt="Description of the image">
+            <a class="abr">Planter pour 100$</a>
         </div>
     </div>
     <div id="itemCounts">
-        <p>Eoliennes achetées: <span id="eolienneCount">0</span></p>
-        <p>Panneaux solaires achetés: <span id="panneauCount">0</span></p>
-        <p id="time">Money: <span id="moneyValue">0$</span></p>
-        <p id="time2">CO2 : <span id="carboneValue">0</span></p>
+        <p>Eoliennes achetées: <span id="eolienneCount">0 / 1000 max</span></p>
+        <p>Panneaux solaires achetés: <span id="panneauCount">0 / 1000 max</span></p>
+        <p id="time">Argent gagnée: <span id="moneyValue">0$</span></p>
+        <p id="time2">C02 economiser: <span id="carboneValue">0 %</span></p>
         <p>---------------------</p>
         <p>Règle du Jeu </p>
-        <p>Le but du jeu est de détruire les usines a charbon</p>
-        <p>acheter les sources d'énergie renouvlable</p>
-        <p>atteindre le taux de CO2 supérieur à 75%</p>
+        <p>Le but du jeu est de détruire les le plus d'usines à charbon</p>
+        <p>Vous gagnerez de l'argent, puis avec cette argents</p>
+        <p>vous pouvez placer des arbres, ou des energies renouvlable</p>
+        <br>
+        <p> + vous avez de l'argent</p>
+        <p> + vous pouvez placer des energies renouvlable puissante</p>
+        <p> ! elle débitera automatiquement depuis argent</p>
+        <br>
+        <p>le but atteindre le taux de CO2 economiser à 75%</p>
+        <br>
+        <a class="index.html"><button>RETOUR A L'ACCEUIL</button></a>
     </div>
     <svg id="allSvg" baseprofile="tiny" fill="#ececec" stroke="black" stroke-linecap="round" stroke-linejoin="round"
         version="1.2" viewbox="0 0 2000 857" xmlns="http://www.w3.org/2000/svg">
@@ -977,6 +997,7 @@ path {
 <script>
 let money = 0;
 let carbone = 0;
+alert("Cliquez sur un pays pour commencer à jouer");
 
 let eolienneCount = parseInt(localStorage.getItem('eolienneCount')) || 0;
 let panneauCount = parseInt(localStorage.getItem('panneauCount')) || 0;
@@ -1052,6 +1073,8 @@ function generateRandomCircle(country) {
     });
     circles.push(image);
     map.appendChild(image);
+    highlightCountry(countryElement, 'red');
+
 }
 
 function createSvgImage(x, y, href) {
@@ -1069,6 +1092,7 @@ function imageOnClick(image) {
         image.life--;
         if (image.life === 0) {
             removeCircle(image);
+            //highlightCountry(countryElement, 'white');
         } else if (image.life < 3) {
             image.setAttribute("href", "./img/usinefeu.png"); 
         }
@@ -1103,7 +1127,7 @@ document.querySelectorAll(".allPaths").forEach(path => {
 
 function mouseOverPath(event) {
     const country = event.target;
-    highlightCountry(country, "pink");
+    highlightCountry(country, "red");
     updateCountryName(country.id, true);
 }
 
@@ -1126,51 +1150,88 @@ function updateCountryName(name, isVisible) {
     nameElement.style.opacity = isVisible ? 1 : 0;
     document.getElementById("namep").innerText = name;
 }
+
 function generatePion(evt) {
-    // Calculate the correct coordinates for the SVG
     var svgPoint = map.createSVGPoint();
     svgPoint.x = evt.clientX;
     svgPoint.y = evt.clientY;
     var cursorPoint = svgPoint.matrixTransform(map.getScreenCTM().inverse());
 
-    let imageHref;
-    if (eolienneCount > 0) {
-        imageHref = './img/eolienne.png'; 
-        eolienneCount--; 
-    } else if (panneauCount > 0) {
-        imageHref = './img/panneau.png'; 
-        panneauCount--; 
-    } else {
-        alert("No items available for placement.");
-        return; 
-    }
+    let imageHref = './img/arbre.png'; 
 
     const pion = document.createElementNS("http://www.w3.org/2000/svg", "image");
-    pion.setAttributeNS(null, "href", imageHref);
-    pion.setAttribute("x", cursorPoint.x - 10); // Adjust to center the image
-    pion.setAttribute("y", cursorPoint.y - 10); // Adjust to center the image
-    pion.setAttribute("width", 80); // Adjust the size as needed
-    pion.setAttribute("height", 80); // Adjust the size as needed
-
-    map.appendChild(pion);
-
-    localStorage.setItem('eolienneCount', eolienneCount.toString());
-    localStorage.setItem('panneauCount', panneauCount.toString());
-
-    updateItemCountDisplay();
+    pion.setAttributeNS("http://www.w3.org/1999/xlink", "href", imageHref);
+    pion.setAttribute("x", cursorPoint.x - 40); 
+    pion.setAttribute("y", cursorPoint.y - 40); 
+    pion.setAttribute("width", 65);
+    pion.setAttribute("height", 65);
+    map.appendChild(pion); 
 }
 
+function generatePion2(evt) {
+    var svgPoint = map.createSVGPoint();
+    svgPoint.x = evt.clientX;
+    svgPoint.y = evt.clientY;
+    var cursorPoint = svgPoint.matrixTransform(map.getScreenCTM().inverse());
 
+    let imageHref = './img/eolienne.png'; 
+
+    const pion = document.createElementNS("http://www.w3.org/2000/svg", "image");
+    pion.setAttributeNS("http://www.w3.org/1999/xlink", "href", imageHref);
+    pion.setAttribute("x", cursorPoint.x - 40); 
+    pion.setAttribute("y", cursorPoint.y - 40); 
+    pion.setAttribute("width", 65);
+    pion.setAttribute("height", 65);
+
+    map.appendChild(pion);  
+}
+
+function generatePion3(evt) {
+    var svgPoint = map.createSVGPoint();
+    svgPoint.x = evt.clientX;
+    svgPoint.y = evt.clientY;
+    var cursorPoint = svgPoint.matrixTransform(map.getScreenCTM().inverse());
+
+    let imageHref = './img/panneau.png'; 
+
+    const pion = document.createElementNS("http://www.w3.org/2000/svg", "image");
+    pion.setAttributeNS("http://www.w3.org/1999/xlink", "href", imageHref);
+    pion.setAttribute("x", cursorPoint.x - 40); 
+    pion.setAttribute("y", cursorPoint.y - 40); 
+    pion.setAttribute("width", 65);
+    pion.setAttribute("height", 65);
+
+    map.appendChild(pion);
+}
 
 document.querySelectorAll(".allPaths").forEach(path => {
     path.addEventListener("click", function(evt) {
-        if (money > 200) {
+        const countryElement = evt.target;
+
+        if (money > 999) {
+            generatePion2(evt);
+            money -= 1000;
+            carbone += 3.5;
+            highlightCountry(countryElement, 'blue');
+            updateMoneyDisplay();
+        } else if (money > 399) {
+            generatePion3(evt);
+            highlightCountry(countryElement, 'blue');
+            money -= 400;
+            carbone += 1.5;
+            updateMoneyDisplay();
+        } else if (money > 99) {
             generatePion(evt);
+            highlightCountry(countryElement, 'blue');
+            carbone += 0.25;
+            money -= 100;
+            updateMoneyDisplay();
         } else {
-            console.log("Not enough money to place a pion.");
+            console.log("Pas assez d'argent pour placer ici.");
         }
     });
 });
+
 
 
 document.getElementById("searchBtn").addEventListener("click", function () {

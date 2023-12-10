@@ -9,6 +9,9 @@ body {
     height: 100vh;
     margin: 0;
     font-family: "Montserrat", sans-serif;
+    background-color: #eee1b3; /* Warm beige background */
+    color: #3d3d3d; /* Darker text for contrast */
+    line-height: 1.6;
 }
 
 .titre {

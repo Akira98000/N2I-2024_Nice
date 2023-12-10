@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <script src="/konami.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="stiles.css">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+   <title>Akiirranonymous | Jeu de quizz générale </title>
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap");
+
+  /* nav css  */
+  nav {
+background-color: rgba(0, 0, 0, 0.5);
+width: max-content;
+padding: 0.7rem 1rem;
+z-index: 2;
+position: fixed;
+bottom: 3rem;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+gap: 0.8rem;
+border-radius: 3rem;
+backdrop-filter: blur(15px);
+font-size: 1.2rem;
+}
+  nav a {
+background: transparent;
+padding: 0.5rem 0.8rem;
+border-radius: 100px;
+display: flex;
+color: rgba(255, 255, 255, 0.6);
+text-decoration: none;
+font-style: normal;
+}
+  nav a:hover {
+background: rgba(0, 0, 0, 0.3);
+color: #ffffff;
+}
+  .active {
+background-color: #B8E23A;
+color: #ffffff;}
+
+</style>
+<body>
+   <header class="header" id="header">
+    <nav>
+      <a id="nav-el" href="/dist/index.html">
+          <i class="bi bi-grid">Acceuil</i></a>
+      <a id="nav-el" class="active" href="/dist/quizz/quiz_menu.html">
+          <i class="bi bi-list-nested">Quiz</i></a>
+      <a id="nav-el" href="/dist/game.html">
+          <i class="bi bi-bookmark-check">Game</i></a>
+      <a id="nav-el" href="/dist/informations/index.html">
+          <i class="bi bi-bookmark-check">Infos</i></a>
+  </nav>
+   </header>
+   <main class="main">
+      <section class="home section" id="home">
+         <div class="home__shadow"></div>
+         <div class="home__container container grid">
+            <div class="home__data">
+               <h3 class="home__subtitle">
+                  Protégeons notre planète !!!
+               </h3>
+               <h1 class="home__title">
+                  Le quizz 
+               </h1>
+               <p class="home__description">
+                  Notre jeu est conçu pour tester et améliorer vos connaissances générales sur le réchauffement climatique. 
+                  L'objectif est simple : répondez correctement à une série de questions variées et fascinantes pour prouver 
+                  votre expertise dans ce thème.
+               </p>
+            </div>
+            <div class="home__cards grid">
+              <a href="index.html">
+              <article class="home__card">
+                  <img src="https://static.vecteezy.com/ti/vecteur-libre/p3/4596123-famille-ours-polaire-sur-la-glace-retrecissement-a-l-arret-de-la-mer-arctique-rechauffement-global-illustration-concept-in-cartoon-vector-vectoriel.jpg" alt="home image" class="home__card-img">
+                  <h3 class="home__card-title">Quizz n°1</h3>
+                  <div class="home__card-shadow"></div>
+               </article>
+              </a> 
+               <a href="index1.html">
+               <article class="home__card">
+                  <img src="https://static.vecteezy.com/ti/vecteur-libre/p3/4596123-famille-ours-polaire-sur-la-glace-retrecissement-a-l-arret-de-la-mer-arctique-rechauffement-global-illustration-concept-in-cartoon-vector-vectoriel.jpg" alt="home image" class="home__card-img">
+                  <h3 class="home__card-title">Quizz n°2</h3>
+                  <div class="home__card-shadow"></div>
+               </article>
+              </a>
+               <a href="index2.html">
+               <article class="home__card">
+                  <img src="https://static.vecteezy.com/ti/vecteur-libre/p3/4596123-famille-ours-polaire-sur-la-glace-retrecissement-a-l-arret-de-la-mer-arctique-rechauffement-global-illustration-concept-in-cartoon-vector-vectoriel.jpg" alt="home image" class="home__card-img">
+                  <h3 class="home__card-title">Quizz n°3</h3>
+                  <div class="home__card-shadow"></div>
+               </article>
+              </a> 
+            </div>
+         </div>
+      </section>
+      </div>
+      </section>
+      <section class="home section" id="home">
+
+      </section>
+      <script src="scrollreveal.min.js"></script>
+      <script src="main2.js"></script>
+</body>
+</html>

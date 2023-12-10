@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="konami.js"></script>
+  <script src="https://unpkg.com/scrollmagic@2.0.8/scrollmagic/minified/ScrollMagic.min.js"></script>
+<script src="https://unpkg.com/scrollmagic@2.0.8/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap");
+    * {
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: 400;
+      fill: #fff;
+    }
+    body {
+      height: 100vh;
+      margin: 0;
+      overflow: hidden; /* Désactiver le défilement de la page */
+    }
+    #canvas-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    #infoRight {
+    position: absolute;
+    top: 36%;
+    right: 3%;
+    width: 25%;
+    text-align: left;
+    z-index: 100;
+    display: flex;
+    font-weight: bold;
+    font-size: 50px;
+    color: #777059;
+  }
+    #info {
+      position: absolute;
+      top: 5%;
+      left: 46%;
+      width: 100%;
+      width: 100%;
+      text-align: left;
+      z-index: 100;
+      display: flex;
+      color: #777059;
+  }
+    /* nav css  */
+    nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+  padding: 0.7rem 1rem;
+  z-index: 2;
+  position: fixed;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+  font-size: 1.2rem;
+}
+    nav a {
+  background: transparent;
+  padding: 0.5rem 0.8rem;
+  border-radius: 100px;
+  display: flex;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-style: normal;
+}
+    nav a:hover {
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+    .active {
+  background-color: #B8E23A;
+  color: #ffffff;}
+
+ 
+  </style>
+
+  <script type="module" crossorigin src="/assets/index-kufOx6oJ.js"></script>
+</head>
+<body>
+
+  <nav>
+    <a id="nav-el" class="active" href="index.html">
+        <i class="bi bi-grid">Home</i></a>
+    <a id="nav-el" href="quizz/quiz_menu.html">
+        <i class="bi bi-list-nested">Quiz</i></a>
+    <a id="nav-el" href="game.html">
+        <i class="bi bi-bookmark-check">Game</i></a>
+    <a id="nav-el" href="informations/index.html">
+        <i class="bi bi-bookmark-check">Infos</i></a>
+</nav>
+
+<div id="info">
+  <h1>Pensez à scroller</h1>
+</div>
+
+  <div id="canvas-container"></div>
+</body>
+</html>
+ 
