@@ -13,9 +13,24 @@ This project was carried out by a team during a one-night competition, with the 
 ## How to use
 
 Clone the Github Repository & Open an IDE like Visual Studio Code
-
 ```bash
   git clone Akira98000/N2I-2024_Nice.git
+```
+Go to the directory
+```bash
+  cd N2I-2024_Nice
+```
+Install all the necessary package 'be sure you have package.json'
+```bash
+  npm install
+```
+If Three.js isn't install correctly
+```bash
+  npm install three
+```
+Launch our project on VITE framework
+```bash
+   npx vite
 ```
 
 ## Authors
