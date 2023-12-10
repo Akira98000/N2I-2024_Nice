@@ -4,7 +4,16 @@
 
 ## About the project
 
-This project was carried out by a team during a one-night competition, with the objective of designing a website dedicated to the prevention of HIV/AIDS. We worked tirelessly to produce an effective and informative website, and are proud to have won the third place. Our team was able to collaborate effectively by combining the skills and knowledge of each member to create an attractive and accessible website that provided vital information on the prevention and fight against HIV/AIDS. We are particularly proud of rising to the challenge and delivering a quality project, despite the short deadline. This result is a testament to our ability to work under pressure and deliver work even in difficult conditions.
+This project was carried out by a team during a one-night competition, with the objective of designing a website dedicated to the prevention global warming. We worked tirelessly to produce an effective and informative website. Our team was able to collaborate effectively by combining the skills and knowledge of each member to create an attractive and accessible website that provided vital information on the prevention and fight on global warming. We are particularly proud of rising to the challenge and delivering a quality project, despite the short deadline. This result is a testament to our ability to work under pressure and deliver work even in difficult conditions.
+
+if you want to watch our website, we have two. One own vercel without three.js and on netlify with three.js to show how three.js can change the website perspectives
+```bash
+  https://lesdetenusdemvc-n2i-2023.netlify.app/
+```
+
+```bash
+  https://n2iclimate.vercel.app/
+```
 
 ## 
 ![Logo](https://www.nuitdelinfo.com/img/logo-n2i-2023.png)
