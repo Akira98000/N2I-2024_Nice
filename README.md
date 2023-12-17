@@ -44,15 +44,15 @@ Launch our project on VITE framework
 
 ## Authors
 
-- [@akirasanthakumaran](https://github.com/Akira98000/) - Game creator and General Project Manager & DevOPS
+- [@akirasanthakumaran](https://github.com/Akira98000/) - Game creator and General Project Manager (All Group) & DevOPS
 
-- [@BresThomas](https://github.com/BresThomas/) - Three.js & Project Manager & Designer
+- [@BresThomas](https://github.com/BresThomas/) - Three.js & Project Manager (Group1) & Designer
 
-- [@JimLainel](https://github.com/allien-j) - Three.js & General Project Manager & DevOPS
+- [@JimLainel](https://github.com/allien-j) - Three.js & General Project Manager (Group2) & DevOPS
+
+- [@LucaPanossianZorab](https://github.com/1eukos) - Quizz Creator & Project Manager (Group3) & DevOPS 
   
-- [@LorisPensa](https://github.com/lorispensa) - Quizz Creator
-
-- [@LucaPanossianZorab](https://github.com/1eukos) - Quizz Creator & DevOPS
+- [@LorisPensa](https://github.com/lorispensa) - Quizz Creator & Maintener
 
 - [@LouisRainero](https://github.com/Repiouu) - Game creator 
   
