@@ -52,21 +52,21 @@ Launch our project on VITE framework
 
 - [@LucaPanossianZorab](https://github.com/1eukos) - Quizz Creator & Project Manager (Group3) & DevOPS 
   
-- [@LorisPensa](https://github.com/lorispensa) - Quizz Creator & Maintener
+- [@LorisPensa](https://github.com/lorispensa) - Quizz Creator & Maintener -> Group 3
 
-- [@LouisRainero](https://github.com/Repiouu) - Game creator 
+- [@LouisRainero](https://github.com/Repiouu) - Game creator -> Group 2
   
-- [@IbraguimTermakiev](https://github.com/ckizp) - Quizz Creator
+- [@IbraguimTermakiev](https://github.com/ckizp) - Quizz Creator -> Group 3
 
-- [@MouadMoustarzak](https://github.com/Swaroskiks) - Info page creator
+- [@MouadMoustarzak](https://github.com/Swaroskiks) - Info page creator -> Group 3
 
-- [@DamienPhan](https://github.com/PhanSayam) - Info page creator
+- [@DamienPhan](https://github.com/PhanSayam) - Info page creator -> Group 2
   
-- [@NathanBitoun](https://github.com/PedroLeMancho) - Info page creator
+- [@NathanBitoun](https://github.com/PedroLeMancho) - Info page creator -> Group 2
   
-- [@MargoRozhkova](https://fr.linkedin.com/in/margo-rozhkova-229131277?trk=people-guest_people_search-card) - Designer & Blender Designer & 'voluntary worker'
+- [@MargoRozhkova](https://fr.linkedin.com/in/margo-rozhkova-229131277?trk=people-guest_people_search-card) - Designer & Blender Designer & 'voluntary worker' -> Group 1
 
-- [@RayanOutili](https://github.com/RayanOUTILI) - Easter egg dev & 'voluntary worker'
+- [@RayanOutili](https://github.com/RayanOUTILI) - Easter egg dev & 'voluntary worker' -> Group 1
 
 ## Badges
 
